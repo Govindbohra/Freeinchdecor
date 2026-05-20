@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Your cart — freeinch">
+  <title>Cart — freeinch</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="cart">
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-free">free</span><span class="logo-inch">inch</span></a>
+      <div class="nav-links">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="shop.html" data-nav="shop">Shop</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="how-it-works.html" data-nav="how">How it works</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6h15l-1.5 9H8L6 6z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L5 3H2"/></svg>
+          <span class="cart-count" data-count="0">0</span>
+        </a>
+        <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-overlay" aria-hidden="true">
+    <a href="index.html" data-nav="home">Home</a>
+    <a href="shop.html" data-nav="shop">Shop</a>
+    <a href="about.html" data-nav="about">About</a>
+    <a href="how-it-works.html" data-nav="how">How it works</a>
+    <a href="contact.html" data-nav="contact">Contact</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+  </div>
+
+  <main>
+    <div class="container page-hero reveal">
+      <h1>Your cart</h1>
+      <p>Tap checkout — we confirm on WhatsApp in minutes.</p>
+      <div class="order-steps" aria-label="Order steps">
+        <span class="active">1. Cart</span>
+        <span>2. WhatsApp</span>
+        <span>3. Done</span>
+      </div>
+    </div>
+
+    <div id="cart-empty" class="container cart-empty">
+      <h2>Your cart is empty</h2>
+      <p>Explore our compact furniture collection.</p>
+      <a href="shop.html" class="btn btn-brass">Shop collection</a>
+    </div>
+
+    <div class="container cart-layout" id="cart-layout" style="display:none">
+      <div class="cart-items" id="cart-items-list"></div>
+
+      <aside class="cart-summary" id="cart-summary" style="display:none">
+        <h3>Order summary</h3>
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="summary-subtotal">₹0</span>
+        </div>
+        <div class="summary-row">
+          <span>Delivery &amp; install</span>
+          <span id="summary-delivery">₹999</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <span id="summary-total">₹0</span>
+        </div>
+        <button type="button" class="btn btn-brass" id="checkout-btn" style="width:100%;margin-top:24px">Checkout on WhatsApp</button>
+        <p class="checkout-note">Free delivery on orders above ₹50,000. Pay after we confirm your order.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><a href="index.html" class="logo" style="margin-bottom:12px;display:inline-flex"><span class="logo-free">free</span><span class="logo-inch">inch</span></a><p>Every inch. Earned.</p></div>
+        <div><h4>Shop</h4><ul><li><a href="shop.html">All products</a></li></ul></div>
+        <div><h4>Company</h4><ul><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Contact</h4><p>hello@freeinch.in</p></div>
+      </div>
+      <div class="footer-bottom"><span>© 2025 freeinch. Every inch earned.</span></div>
+    </div>
+  </footer>
+  <a href="https://wa.me/919876543210" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.89-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
